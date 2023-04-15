@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'src/shared/presentation/pages/main_page.dart';
+import 'src/shared/presentation/pages/components_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MainPage(),
+      title: 'Study Jam',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light().copyWith(useMaterial3: true),
+      home: const ComponentsPage(),
     );
   }
 }

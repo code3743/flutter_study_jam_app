@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.5
 
 dev_dependencies:
   flutter_test:
@@ -26,6 +27,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/icons/
+    - assets/icons/svgs/
     - assets/fonts/
     - assets/lotties/
   #   - images/a_dot_burr.jpeg
@@ -42,11 +44,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+    - family: SF Pro Display
+      fonts:
+        - asset: assets/fonts/SF-Pro-Display-Regular.ttf
+        - asset: assets/fonts/SF-Pro-Display-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/SF-Pro-Display-Medium.ttf
+          weight: 500
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
