@@ -11,7 +11,7 @@ class IconComponent extends StatelessWidget {
     final isSelect = ValueNotifier(false);
     return ValueListenableBuilder(
       valueListenable: isSelect,
-      builder: (_, value, __) => GestureDetector(
+      builder: (_, isSelecteValue, __) => GestureDetector(
         onTap: () {
           isSelect.value = !isSelect.value;
         },
@@ -20,9 +20,9 @@ class IconComponent extends StatelessWidget {
           height: 50,
           width: 50,
           decoration: BoxDecoration(
-              color: value ? color : null,
+              color: isSelecteValue ? color : null,
               shape: BoxShape.circle,
-              boxShadow: value
+              boxShadow: isSelecteValue
                   ? [
                       BoxShadow(
                           color: color.withOpacity(.2),
@@ -34,8 +34,9 @@ class IconComponent extends StatelessWidget {
           child: SvgPicture.asset(
             pathIcon,
             fit: BoxFit.contain,
-            colorFilter:
-                !value ? ColorFilter.mode(color, BlendMode.srcIn) : null,
+            colorFilter: !isSelecteValue
+                ? ColorFilter.mode(color, BlendMode.srcIn)
+                : null,
           ),
         ),
       ),
